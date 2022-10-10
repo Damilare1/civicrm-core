@@ -119,6 +119,11 @@
      <weight>35</weight>
   </item>
   <item>
+     <path>civicrm/admin/reltype/edit</path>
+     <title>Edit Relationship Type</title>
+     <page_callback>CRM_Admin_Form_RelationshipType</page_callback>
+  </item>
+  <item>
      <path>civicrm/admin/options/subtype</path>
      <title>Contact Types</title>
      <page_callback>CRM_Admin_Page_ContactType</page_callback>
