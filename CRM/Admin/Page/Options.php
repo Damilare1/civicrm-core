@@ -152,9 +152,15 @@ class CRM_Admin_Page_Options extends CRM_Core_Page_Basic {
   public function &links() {
     if (!self::$_links) {
       self::$_links = [
+        CRM_Core_Action::VIEW => [
+          'name' => ts('View'),
+          'url' => 'civicrm/admin/options/' . self::$_gName . '/edit',
+          'qs' => 'action=view&id=%%id%%&reset=1',
+          'title' => ts('View Relationship Type'),
+        ],
         CRM_Core_Action::UPDATE => [
           'name' => ts('Edit'),
-          'url' => 'civicrm/admin/options/' . self::$_gName,
+          'url' => 'civicrm/admin/options/' . self::$_gName . '/edit',
           'qs' => 'action=update&id=%%id%%&reset=1',
           'title' => ts('Edit %1', [1 => self::$_gName]),
         ],
@@ -170,7 +176,7 @@ class CRM_Admin_Page_Options extends CRM_Core_Page_Basic {
         ],
         CRM_Core_Action::DELETE => [
           'name' => ts('Delete'),
-          'url' => 'civicrm/admin/options/' . self::$_gName,
+          'url' => 'civicrm/admin/options/' . self::$_gName . '/edit',
           'qs' => 'action=delete&id=%%id%%',
           'title' => ts('Delete %1 Type', [1 => self::$_gName]),
         ],
